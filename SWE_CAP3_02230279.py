@@ -10,18 +10,18 @@ clock = pygame.time.Clock()
 running = True
 
 # Load the background image
-background_image = pygame.image.load("backgroud2.jpeg")  # Replace "backgroud2.jpeg" with the path to your image file
+background_image = pygame.image.load("backgroud2.jpeg") 
 background_image = pygame.transform.scale(background_image, (square_width, square_width))
 
-# Load the target image
-target_image = pygame.image.load("apple 2.jpg")  # Replace "apple 2.jpg" with the path to your target image file
+# Load the target image apple
+target_image = pygame.image.load("apple 2.jpg") 
 target_image = pygame.transform.scale(target_image, (pixel_width, pixel_width))
 
-# Define font and text
+#Font and text
 font = pygame.font.SysFont(None, 50)
 
-# Load sound effects
-eat_sound = pygame.mixer.Sound("ding.mp3")  # Replace "eat_sound.wav" with the path to your sound file
+# Load sound effects while eating apple 
+eat_sound = pygame.mixer.Sound("ding.mp3")  
 
 def generate_starting_position():
     position_range = (pixel_width // 2, square_width - pixel_width // 2, pixel_width)
@@ -102,7 +102,7 @@ while running:
     # Blit the target image onto the screen at the target's position
     screen.blit(target_image, target.topleft)
 
-    # Display score
+    # Show score
     score_text = font.render(f"Score: {score}", True, (0, 0, 0))
     screen.blit(score_text, (10, 10))
 
